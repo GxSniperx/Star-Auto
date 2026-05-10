@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Star Auto</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <span class="main">Star Auto</span>
+    <span class="sub">cars & wash & sales</span>
+  </div>
+
+  <nav>
+    <a href="#">Accueil</a>
+    <a href="#produits">Produits</a>
+    <a href="#">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <div class="cart-btn" onclick="toggleCart()">
+    🛒 Panier (<span id="cart-count">0</span>)
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <p class="small">Bienvenue chez Star Auto</p>
+    <h1>Pièces auto, accessoires<br>& lavage voiture</h1>
+    <p class="desc">
+      Des produits de qualité au meilleurs prix.<br>
+      Commandez facilement via WhatsApp.
+    </p>
+
+    <button onclick="checkoutWhatsApp()" class="whatsapp">
+      Commander sur WhatsApp
+    </button>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div>
+    <h3>Qualité garantie</h3>
+    <p>Des produits fiables et durables</p>
+  </div>
+  <div>
+    <h3>Livraison rapide</h3>
+    <p>Partout au Maroc</p>
+  </div>
+  <div>
+    <h3>Commande facile</h3>
+    <p>Sur WhatsApp en 1 clic</p>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="produits" class="products-section">
+  <h2>Produits en vente</h2>
+  <div class="products" id="products"></div>
+</section>
+
+<!-- CART -->
+<div class="cart" id="cart">
+  <div class="cart-header">
+    <h2>Panier</h2>
+    <button onclick="toggleCart()">X</button>
+  </div>
+
+  <ul id="cart-items"></ul>
+  <h3>Total: <span id="total">0</span> MAD</h3>
+
+  <button class="whatsapp" onclick="checkoutWhatsApp()">
+    Commander sur WhatsApp
+  </button>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>📍 Lqliaa, Morocco</p>
+  <p>+212 782924656</p>
+
+  <div class="socials">
+    <a href="https://www.instagram.com/starauto_9/" target="_blank" rel="noopener noreferrer" class="insta">
+  <i class="fab fa-instagram"></i> Instagram
+</a>
+
+<a href="https://www.facebook.com/profile.php?id=61583821656911#" target="_blank" rel="noopener noreferrer" class="facebook">
+  <i class="fab fa-facebook-f"></i> Facebook
+</a>
+
+<a href="https://www.tiktok.com/@starauto.cars.wash.sale" target="_blank" rel="noopener noreferrer" class="tiktok">
+  <i class="fab fa-tiktok"></i> TikTok
+</a>
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+<div id="imageModal" class="image-modal">
+  <span class="close-btn" onclick="closeImage()">&times;</span>
+  <img id="modalImage">
+</div>
+
+<button class="floating-cart" onclick="toggleCart()">
+  🛒 <span id="floating-cart-count">0</span>
+</button>
+
+<footer>
+  <p>© 2025 Star Auto Cars & Wash & Sales | Tous droits réservés | Maroc</p>
+</footer>
+
+<div id="cart-toast" class="cart-toast">
+  ✅ Produit ajouté au panier
+</div>
+
+</body>
+</html>
