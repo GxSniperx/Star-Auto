@@ -30,7 +30,7 @@ function displayProducts() {
     container.innerHTML += `
       <div class="product">
         <img 
-  src="images/product${i+1}.png" 
+  src="product${i+1}.png" 
   onclick="openImage(this.src)"
 >
         <h3>${products[i].name}</h3>
