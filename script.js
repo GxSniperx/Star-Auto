@@ -29,10 +29,7 @@ function displayProducts() {
   products.forEach((name, i) => {
     container.innerHTML += `
       <div class="product">
-        <img 
-  src="product${i+1}.png" 
-  onclick="openImage(this.src)"
->
+        <img src="./product${i+1}.png" onclick="openImage(this.src)">
         <h3>${products[i].name}</h3>
         <p class="price">${products[i].price}</p>
         <button onclick="addToCart(${i})">Ajouter</button>
